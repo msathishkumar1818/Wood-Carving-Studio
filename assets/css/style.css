@@ -33,6 +33,12 @@
   --header-height: 64px;
 }
 
+@media (min-width: 640px) {
+  :root {
+    --header-height: 72px;
+  }
+}
+
 /* ==========================================================================
    Dark Mode System (Strict Pure Black #000000 Requirement)
    ========================================================================== */
@@ -229,15 +235,33 @@ html.dark .site-header.scrolled {
   flex-shrink: 0;
 }
 
+@media (min-width: 640px) {
+  .brand-link {
+    gap: 0.75rem;
+  }
+}
+
 .brand-logo-img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
   object-fit: contain;
+  flex-shrink: 0;
   transition: transform 0.25s ease;
 }
 
+@media (min-width: 640px) {
+  .brand-logo-img {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+  }
+}
+
 .brand-link:hover .brand-logo-img {
-  transform: rotate(8deg) scale(1.04);
+  transform: rotate(8deg) scale(1.06);
 }
 
 .brand-title {
@@ -247,16 +271,31 @@ html.dark .site-header.scrolled {
   letter-spacing: 0.03em;
   color: var(--text-primary);
   white-space: nowrap;
+  line-height: 1.15;
+}
+
+@media (min-width: 640px) {
+  .brand-title {
+    font-size: 1.1rem;
+  }
 }
 
 .brand-subtitle-badge {
   font-size: 0.5625rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent-gold);
   display: block;
-  line-height: 1;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+
+@media (min-width: 640px) {
+  .brand-subtitle-badge {
+    font-size: 0.625rem;
+    margin-top: 2px;
+  }
 }
 
 /* Navigation Links */
