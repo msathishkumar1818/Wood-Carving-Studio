@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wood Carving Studio — Contemporary Architectural Wood Sculpt & Monumental Forms</title>
+
+  <!-- Brand Favicon Logo -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icons/logo.svg">
+
+  <!-- Tailwind CSS Engine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <!-- External Stylesheets (Zero Inline CSS in HTML) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body class="bg-stone-50 text-stone-900 dark:bg-black dark:text-white transition-colors duration-200">
+
+  <!-- ======================================================================
+       1. Branded Preloader (With Official Studio Logo)
+       ====================================================================== -->
+  <div id="page-loader" aria-label="Loading Wood Carving Studio">
+    <div class="loader-logo-ring">
+      <img src="assets/images/icons/logo.svg" alt="Wood Carving Studio Emblem" width="72" height="72">
+    </div>
+    <div class="mt-4 text-center">
+      <h2 class="font-serif text-lg font-bold tracking-widest text-stone-900 dark:text-white uppercase">Wood Carving
+        Studio</h2>
+      <p class="text-xs text-amber-600 dark:text-amber-400 tracking-wider uppercase font-medium mt-1">Architectural
+        Sculpt Series</p>
+    </div>
+    <div class="loader-bar" role="progressbar" aria-label="Page loading progress">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       2. Fixed Desktop & Mobile Header (Single-Line Layout, Low Height)
+       ====================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container-custom header-container">
+
+      <!-- Brand Logo & Monogram -->
+      <a href="index.html" class="brand-link" aria-label="Wood Carving Studio Homepage">
+        <img src="assets/images/icons/logo.svg" alt="Wood Carving Studio Logo" class="brand-logo-img" width="34"
+          height="34">
+        <div class="flex flex-col">
+          <span class="brand-title">Wood Carving Studio</span>
+          <span class="brand-subtitle-badge">Master Craftsmanship</span>
+        </div>
+      </a>
+
+      <!-- Exactly 6 Desktop Navigation Items -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <!-- 1. Home (Click Only Dropdown) -->
+          <li class="nav-item">
+            <button id="home-dropdown-btn" class="nav-link dropdown-trigger active" aria-haspopup="true"
+              aria-expanded="false" type="button">
+              <span>Home</span>
+              <svg class="dropdown-arrow inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <ul id="home-dropdown-menu" class="dropdown-menu" role="menu">
+              <li role="none"><a href="index.html" class="dropdown-link" role="menuitem">Home 1 (Artisanal Heritage)</a>
+              </li>
+              <li role="none"><a href="home-2.html" class="dropdown-link active" role="menuitem">Home 2 (Architectural
+                  Sculpt)</a></li>
+            </ul>
+          </li>
+
+          <!-- 2. About -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+
+          <!-- 3. Products -->
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Products</a>
+          </li>
+
+          <!-- 4. Custom Commissions -->
+          <li class="nav-item">
+            <a href="commissions.html" class="nav-link">Commissions</a>
+          </li>
+
+          <!-- 5. Gallery -->
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+
+          <!-- 6. Contact (Directly Visible) -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls: RTL + Dark Mode + Login -->
+      <div class="header-actions">
+        <!-- RTL / LTR Toggle -->
+        <button id="dir-toggle-desktop" class="icon-control-btn" type="button" aria-label="Toggle text direction"
+          title="Toggle RTL/LTR">
+          <span class="dir-label text-xs font-bold uppercase tracking-wider">RTL</span>
+        </button>
+
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle-desktop" class="icon-control-btn" type="button" aria-label="Toggle dark mode"
+          title="Toggle Dark/Light Mode">
+          <svg class="icon-sun hidden w-4 h-4 text-amber-400" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon w-4 h-4 text-stone-700 dark:text-stone-300" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Header CTA Button (Desktop Only) -->
+        <a href="contact.html" class="header-cta-btn" aria-label="Commission bespoke woodwork">
+          <span>Commission Work</span>
+          <svg class="w-3.5 h-3.5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" type="button" aria-label="Open mobile navigation menu"
+          aria-expanded="false">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       3. Mobile Navigation Drawer & Backdrop
+       ====================================================================== -->
+  <div id="mobile-drawer-backdrop" class="mobile-drawer-backdrop" aria-hidden="true"></div>
+
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <div class="mobile-brand-box">
+        <img src="assets/images/icons/logo.svg" alt="Wood Carving Studio" class="w-8 h-8 object-contain">
+        <span class="font-serif font-bold text-base text-stone-900 dark:text-white leading-tight">Wood Carving
+          Studio</span>
+      </div>
+      <button id="mobile-close-btn"
+        class="p-1.5 rounded-md text-stone-500 hover:text-stone-900 dark:hover:text-white focus:outline-none"
+        aria-label="Close menu">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-drawer-nav">
+      <div>
+        <button id="mobile-home-accordion-btn" class="mobile-nav-link mobile-accordion-btn active" type="button"
+          aria-expanded="false">
+          <span>Home</span>
+          <svg class="accordion-arrow w-4 h-4 transition-transform duration-200" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="mobile-home-subnav" class="mobile-subnav">
+          <a href="index.html" class="mobile-subnav-link">Home 1 (Artisanal Heritage)</a>
+          <a href="home-2.html" class="mobile-subnav-link active">Home 2 (Architectural Sculpt)</a>
+        </div>
+      </div>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="products.html" class="mobile-nav-link">Products</a>
+      <a href="commissions.html" class="mobile-nav-link">Custom Commissions</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <div class="mobile-controls-row">
+        <button id="dir-toggle-mobile" class="icon-control-btn flex-1 py-2 text-xs font-semibold" type="button">
+          <span class="dir-label">RTL</span>
+        </button>
+        <button id="theme-toggle-mobile" class="icon-control-btn flex-1 py-2" type="button">
+          <span class="sr-only">Toggle Dark Mode</span>
+          <svg class="icon-sun hidden w-4 h-4 text-amber-400 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon w-4 h-4 text-stone-700 dark:text-stone-300 mx-auto" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile Drawer CTA Button -->
+      <a href="contact.html"
+        class="w-full text-center py-2.5 px-4 bg-amber-800 hover:bg-amber-700 dark:bg-amber-600 dark:hover:bg-amber-500 text-white font-bold text-xs uppercase tracking-wider rounded-md transition-colors block">
+        Commission Work
+      </a>
+    </div>
+  </aside>
+
+
+
+  <!-- ======================================================================
+       5. MAIN CONTENT AREA — HOME 2 (EXACTLY 6 MAIN CONTENT SECTIONS)
+       ====================================================================== -->
+  <main class="main-content" id="main-content">
+
+    <!-- ------------------------------------------------------------------
+         SECTION 1: ARCHITECTURAL MONUMENTAL HERO (FULL VIEWPORT HEIGHT)
+         ------------------------------------------------------------------ -->
+    <section
+      class="hero-full-height relative bg-stone-900 text-white overflow-hidden border-b border-stone-800 flex flex-col justify-between py-12"
+      aria-labelledby="hero-2-heading">
+      <!-- Full-Bleed Architectural Wood Canvas Background -->
+      <img src="assets/images/hero/p16.jpg" alt="Monumental architectural carved timber interior"
+        class="absolute inset-0 w-full h-full object-cover brightness-[0.7] contrast-110 opacity-75">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/30"></div>
+
+      <div class="container-custom relative z-10 my-auto text-center">
+        <!-- Modernist Eyebrow -->
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+          <span class="text-xs font-semibold text-amber-300 uppercase tracking-widest">Architectural Woodcraft &
+            Monumental Sculptures</span>
+        </div>
+
+        <!-- Grand Monumental Headline -->
+        <h1 id="hero-2-heading"
+          class="font-serif text-2xl sm:text-4xl lg:text-[2.85rem] xl:text-5xl font-bold tracking-tight text-white max-w-4xl mx-auto leading-[1.18] mb-5">
+          Sculpting Massive Timber for Timeless Spatial Sanctuaries.
+        </h1>
+
+        <!-- Crisp Minimalist Prose -->
+        <p class="text-sm sm:text-base lg:text-lg text-stone-200 max-w-2xl mx-auto leading-relaxed mb-6">
+          Monumental solid timber sculptures and acoustic reliefs engineered in harmony with world-class architecture.
+        </p>
+
+        <!-- Action Controls -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="#monumental-works"
+            class="w-full sm:w-auto text-center px-6 sm:px-7 py-3.5 bg-amber-600 hover:bg-amber-500 text-black font-bold text-sm rounded-md shadow-lg transition-all">
+            Explore Monumental Works
+          </a>
+          <a href="#trade-commission"
+            class="w-full sm:w-auto text-center px-6 sm:px-7 py-3.5 bg-stone-950/80 hover:bg-stone-900 text-white font-semibold text-sm rounded-md border border-stone-700 backdrop-blur-md transition-all">
+            Architect & Trade Inquiry
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Studio Operational Telemetry Bar -->
+      <div class="container-custom relative z-10 mt-8 pt-6 border-t border-white/10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-center hero-metrics-grid">
+          <div
+            class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 backdrop-blur-md flex flex-col justify-center items-center text-center h-full shadow-lg">
+            <span class="block font-serif text-base sm:text-lg lg:text-xl font-bold text-amber-400 leading-tight">42 Metric Tons</span>
+            <span class="text-[10px] sm:text-xs text-stone-300 uppercase tracking-wider mt-1.5 leading-snug">Aged Old-Growth Reserve</span>
+          </div>
+          <div
+            class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 backdrop-blur-md flex flex-col justify-center items-center text-center h-full shadow-lg">
+            <span class="block font-serif text-base sm:text-lg lg:text-xl font-bold text-amber-400 leading-tight">Up to 8.5 Meters</span>
+            <span class="text-[10px] sm:text-xs text-stone-300 uppercase tracking-wider mt-1.5 leading-snug">Single Continuous Beams</span>
+          </div>
+          <div
+            class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 backdrop-blur-md flex flex-col justify-center items-center text-center h-full shadow-lg">
+            <span class="block font-serif text-base sm:text-lg lg:text-xl font-bold text-amber-400 leading-tight">Zero Synthetic Resins</span>
+            <span class="text-[10px] sm:text-xs text-stone-300 uppercase tracking-wider mt-1.5 leading-snug">Pure Bio-Based Oils</span>
+          </div>
+          <div
+            class="p-3.5 sm:p-4 rounded-xl bg-black/50 border border-white/10 backdrop-blur-md flex flex-col justify-center items-center text-center h-full shadow-lg">
+            <span class="block font-serif text-base sm:text-lg lg:text-xl font-bold text-amber-400 leading-tight">Global Installation</span>
+            <span class="text-[10px] sm:text-xs text-stone-300 uppercase tracking-wider mt-1.5 leading-snug">Engineered Structural Rigging</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 2: MONUMENTAL ARCHITECTURAL INSTALLATIONS (DUAL FEATURE)
+         ------------------------------------------------------------------ -->
+    <section id="monumental-works"
+      class="py-16 sm:py-24 bg-stone-50 dark:bg-black border-b border-stone-200 dark:border-stone-900"
+      aria-labelledby="monumental-heading">
+      <div class="container-custom">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <div class="max-w-xl">
+            <span class="timber-badge mb-2.5">Spatial Scale</span>
+            <h2 id="monumental-heading"
+              class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-900 dark:text-white tracking-tight leading-tight">
+              Monumental Architectural Installations
+            </h2>
+          </div>
+          <p class="text-stone-600 dark:text-stone-300 text-sm sm:text-base max-w-md leading-relaxed md:pb-1">
+            Large-format solid timber interventions designed in direct dialogue with contemporary stone and concrete architecture.
+          </p>
+        </div>
+
+        <!-- Alternating Dual Feature (Not Cards, Fresh Editorial Layout) -->
+        <div class="space-y-16">
+
+          <!-- Feature 1: The Cantilevered Cedar Ribbon -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div
+              class="lg:col-span-7 rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-xl aspect-[16/10] bg-stone-900">
+              <img src="assets/images/sections/p17.jpg" alt="Cantilevered sculpted cedar installation"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+            </div>
+            <div class="lg:col-span-5 flex flex-col justify-center">
+              <span class="text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-widest mb-2">Project:
+                Tokyo Private Gallery</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white mb-4">The Cantilevered
+                Cedar Ribbon</h3>
+              <p class="text-stone-700 dark:text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
+                Salvaged 7.2-meter Western Red Cedar with hand-planed micro-fluting for soft acoustic diffusion.
+              </p>
+              <div class="grid grid-cols-2 gap-4 py-4 border-y border-stone-200 dark:border-stone-800 text-xs">
+                <div>
+                  <span class="text-stone-500 dark:text-stone-400 block font-medium">Timber Species</span>
+                  <span class="text-stone-900 dark:text-white font-bold">Western Red Cedar</span>
+                </div>
+                <div>
+                  <span class="text-stone-500 dark:text-stone-400 block font-medium">Net Weight</span>
+                  <span class="text-stone-900 dark:text-white font-bold">1,850 kg (Counter-balanced)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2: Shou Sugi Ban Screen (Reversed Layout) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
+              <span class="text-xs font-bold text-amber-700 dark:text-amber-400 uppercase tracking-widest mb-2">Project:
+                Zurich Alpine Villa</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 dark:text-white mb-4">Monolithic
+                Charred Spatial Screen</h3>
+              <p class="text-stone-700 dark:text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
+                European Oak charred via traditional Yakisugi fire hardening with sculpted 50mm raking light ripples.
+              </p>
+              <div class="grid grid-cols-2 gap-4 py-4 border-y border-stone-200 dark:border-stone-800 text-xs">
+                <div>
+                  <span class="text-stone-500 dark:text-stone-400 block font-medium">Surface Treatment</span>
+                  <span class="text-stone-900 dark:text-white font-bold">Fire Charred & Natural Wax</span>
+                </div>
+                <div>
+                  <span class="text-stone-500 dark:text-stone-400 block font-medium">Fire Rating</span>
+                  <span class="text-stone-900 dark:text-white font-bold">Class B-s1, d0 Certified</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:col-span-7 order-1 lg:order-2 rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-xl aspect-[16/10] bg-stone-900">
+              <img src="assets/images/sections/p18.jpg" alt="Charred dark wood spatial screen"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 3: RARE TIMBER SPECIMEN LIBRARY (MATERIAL LIBRARY)
+         ------------------------------------------------------------------ -->
+    <section class="py-16 sm:py-24 bg-stone-100 dark:bg-black border-b border-stone-200 dark:border-stone-900"
+      aria-labelledby="timbers-heading">
+      <div class="container-custom">
+
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="timber-badge mb-3">Material Provenance</span>
+          <h2 id="timbers-heading"
+            class="font-serif text-2xl sm:text-4xl font-bold text-stone-900 dark:text-white tracking-tight">
+            Rare Specimen Timber Library
+          </h2>
+          <p class="text-stone-700 dark:text-stone-300 text-sm sm:text-base mt-3">
+            Reclaimed ancient timbers, sub-fossil logs, and figured burls with certified provenance.
+          </p>
+        </div>
+
+        <!-- 4 Specimen Tiles -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Specimen 1 -->
+          <div class="specimen-tile">
+            <div>
+              <div class="aspect-square rounded-lg overflow-hidden mb-4 bg-stone-900">
+                <img src="assets/images/sections/p19.jpg" alt="Sub-fossil bog oak grain"
+                  class="w-full h-full object-cover">
+              </div>
+              <span
+                class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest block mb-1">Sub-Fossil
+                Timber</span>
+              <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-white mb-2">Ancient Natural Bog Oak</h3>
+              <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                Submerged 5,000+ years. Natural anaerobic reaction creates jet-black heartwood.
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-stone-200 dark:border-stone-800 text-[11px] flex justify-between font-semibold">
+              <span class="text-stone-500">Janka Scale:</span>
+              <span class="text-stone-900 dark:text-white">1,620 lbf</span>
+            </div>
+          </div>
+
+          <!-- Specimen 2 -->
+          <div class="specimen-tile">
+            <div>
+              <div class="aspect-square rounded-lg overflow-hidden mb-4 bg-stone-900">
+                <img src="assets/images/sections/p20.jpg" alt="Spalted beech wood grain"
+                  class="w-full h-full object-cover">
+              </div>
+              <span
+                class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest block mb-1">Organic
+                Ink Lines</span>
+              <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-white mb-2">Spalted English & Beech</h3>
+              <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                Natural black zone lines create map-like contour paths through cream timber.
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-stone-200 dark:border-stone-800 text-[11px] flex justify-between font-semibold">
+              <span class="text-stone-500">Janka Scale:</span>
+              <span class="text-stone-900 dark:text-white">1,300 lbf</span>
+            </div>
+          </div>
+
+          <!-- Specimen 3 -->
+          <div class="specimen-tile">
+            <div>
+              <div class="aspect-square rounded-lg overflow-hidden mb-4 bg-stone-900">
+                <img src="assets/images/sections/p21.jpg" alt="California claro walnut grain"
+                  class="w-full h-full object-cover">
+              </div>
+              <span
+                class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest block mb-1">Flame
+                Chatoyancy</span>
+              <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-white mb-2">Figured Claro & Walnut</h3>
+              <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                Mocha, violet, and bronze grain swirls with optical 3D depth under organic oils.
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-stone-200 dark:border-stone-800 text-[11px] flex justify-between font-semibold">
+              <span class="text-stone-500">Janka Scale:</span>
+              <span class="text-stone-900 dark:text-white">1,010 lbf</span>
+            </div>
+          </div>
+
+          <!-- Specimen 4 -->
+          <div class="specimen-tile">
+            <div>
+              <div class="aspect-square rounded-lg overflow-hidden mb-4 bg-stone-900">
+                <img src="assets/images/sections/p22.jpg" alt="Burled redwood timber slab"
+                  class="w-full h-full object-cover">
+              </div>
+              <span
+                class="text-[10px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest block mb-1">Reclaimed
+                Giants</span>
+              <h3 class="font-serif text-lg font-bold text-stone-900 dark:text-white mb-2">Reclaimed Coastal Redwood
+              </h3>
+              <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                Salvaged century-old flumes and windfalls with exceptional dimensional stability.
+              </p>
+            </div>
+            <div
+              class="pt-3 border-t border-stone-200 dark:border-stone-800 text-[11px] flex justify-between font-semibold">
+              <span class="text-stone-500">Janka Scale:</span>
+              <span class="text-stone-900 dark:text-white">450 lbf</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 4: CONTEMPORARY SCULPTURAL RELICS (EVEN 4-COLUMN CARDS)
+         ------------------------------------------------------------------ -->
+    <section class="py-16 sm:py-24 bg-stone-50 dark:bg-black border-b border-stone-200 dark:border-stone-900"
+      aria-labelledby="contemporary-relics-heading">
+      <div class="container-custom">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span class="timber-badge mb-3">Gallery Editions</span>
+            <h2 id="contemporary-relics-heading"
+              class="font-serif text-2xl sm:text-4xl font-bold text-stone-900 dark:text-white tracking-tight">
+              Contemporary Sculptural Forms
+            </h2>
+          </div>
+          <p class="text-stone-700 dark:text-stone-300 text-sm sm:text-base max-w-md leading-relaxed">
+            Four limited sculptural plinths uniting topology with ancient hand gouges.
+          </p>
+        </div>
+
+        <!-- 4 Strictly Even Cards (Equal height, uniform padding, aligned typography) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+
+          <!-- Card 1 -->
+          <article class="contemporary-card">
+            <div>
+              <div class="aspect-[4/5] overflow-hidden bg-stone-900">
+                <img src="assets/images/products/p23.jpg" alt="Mobius loop modern wood sculpture"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              </div>
+              <div class="p-5">
+                <span
+                  class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-widest block mb-1">Edition
+                  of 6</span>
+                <h3 class="font-serif text-base font-bold text-stone-900 dark:text-white mb-2">The Mobius Infinite Loop
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                  Hand-carved White Ash forming a continuous single-sided geometric plane.
+                </p>
+                <div
+                  class="text-[11px] space-y-1 text-stone-500 dark:text-stone-400 pt-3 border-t border-stone-200 dark:border-stone-800">
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Height:</span> 94 cm</p>
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Timber:</span> Steamed Ash</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <a href="#trade-commission"
+                class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider bg-stone-900 hover:bg-amber-800 dark:bg-stone-800 dark:hover:bg-amber-600 text-white rounded-md transition-colors">
+                Reserve Edition
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="contemporary-card">
+            <div>
+              <div class="aspect-[4/5] overflow-hidden bg-stone-900">
+                <img src="assets/images/products/p24.jpg" alt="Faceted chiseled wood monolith"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              </div>
+              <div class="p-5">
+                <span
+                  class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-widest block mb-1">Edition
+                  of 4</span>
+                <h3 class="font-serif text-base font-bold text-stone-900 dark:text-white mb-2">Brutalist Faceted Obelisk
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                  Charred European Oak monolith carved with bold planar adze shadow cuts.
+                </p>
+                <div
+                  class="text-[11px] space-y-1 text-stone-500 dark:text-stone-400 pt-3 border-t border-stone-200 dark:border-stone-800">
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Height:</span> 160 cm</p>
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Timber:</span> Charred Oak</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <a href="#trade-commission"
+                class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider bg-stone-900 hover:bg-amber-800 dark:bg-stone-800 dark:hover:bg-amber-600 text-white rounded-md transition-colors">
+                Reserve Edition
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="contemporary-card">
+            <div>
+              <div class="aspect-[4/5] overflow-hidden bg-stone-900">
+                <img src="assets/images/products/p25.jpg" alt="Biomorphic ribbed wood plinth"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              </div>
+              <div class="p-5">
+                <span
+                  class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-widest block mb-1">Unique
+                  Work</span>
+                <h3 class="font-serif text-base font-bold text-stone-900 dark:text-white mb-2">Biomorphic Ribbed Plinth
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                  Hollowed spalted maple vessel sculpted with 24 concentric chisel ribs.
+                </p>
+                <div
+                  class="text-[11px] space-y-1 text-stone-500 dark:text-stone-400 pt-3 border-t border-stone-200 dark:border-stone-800">
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Height:</span> 72 cm</p>
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Timber:</span> Spalted Maple</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <a href="#trade-commission"
+                class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider bg-stone-900 hover:bg-amber-800 dark:bg-stone-800 dark:hover:bg-amber-600 text-white rounded-md transition-colors">
+                Reserve Edition
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="contemporary-card">
+            <div>
+              <div class="aspect-[4/5] overflow-hidden bg-stone-900">
+                <img src="assets/images/products/p26.jpg" alt="Parametric carved wave wooden tile"
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              </div>
+              <div class="p-5">
+                <span
+                  class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-widest block mb-1">Architectural
+                  Modular</span>
+                <h3 class="font-serif text-base font-bold text-stone-900 dark:text-white mb-2">Parametric Wave Matrix
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-4">
+                  Thermally modified pine tiles hand-sculpted in continuous ripple patterns.
+                </p>
+                <div
+                  class="text-[11px] space-y-1 text-stone-500 dark:text-stone-400 pt-3 border-t border-stone-200 dark:border-stone-800">
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Module:</span> 60 &times; 60 cm</p>
+                  <p><span class="font-semibold text-stone-900 dark:text-white">Timber:</span> Thermal Pine</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <a href="#trade-commission"
+                class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider bg-stone-900 hover:bg-amber-800 dark:bg-stone-800 dark:hover:bg-amber-600 text-white rounded-md transition-colors">
+                Reserve Edition
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 5: SPATIAL ACOUSTICS & BIOPHILIC ARCHITECTURE
+         ------------------------------------------------------------------ -->
+    <section
+      class="py-20 sm:py-28 bg-stone-100 dark:bg-black border-b border-stone-200 dark:border-stone-800 relative overflow-hidden"
+      aria-labelledby="acoustics-heading">
+      <div class="container-custom">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <!-- Left Column: Architectural Science Content -->
+          <div class="lg:col-span-6">
+            <span class="timber-badge mb-4">Architectural Science</span>
+            <h2 id="acoustics-heading"
+              class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 dark:text-white tracking-tight mb-6">
+              Acoustic Purity & Biophilic Resonance
+            </h2>
+            <p class="text-stone-700 dark:text-stone-300 text-base sm:text-lg leading-relaxed mb-8">
+              Carved timber acts as an acoustic instrument. Our gouged geometries break flutter echoes and disperse
+              harsh
+              reflections in concert halls and luxury residences.
+            </p>
+
+            <div class="space-y-4">
+              <!-- Feature 1 -->
+              <div
+                class="p-5 rounded-xl bg-white dark:bg-stone-950 border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                    <h3 class="font-serif font-bold text-amber-700 dark:text-amber-400 text-sm">3D High-Frequency Diffusion</h3>
+                  </div>
+                  <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Gouged scallops disperse reflections across a 180° wavefront with zero acoustic flutter.
+                  </p>
+                </div>
+                <div class="flex-shrink-0 self-start sm:self-center px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold whitespace-nowrap">
+                  180° Wavefront
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div
+                class="p-5 rounded-xl bg-white dark:bg-stone-950 border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                    <h3 class="font-serif font-bold text-amber-700 dark:text-amber-400 text-sm">Hygroscopic Microclimate Regulation</h3>
+                  </div>
+                  <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                    Solid wood breathes, naturally moderating room moisture and air quality.
+                  </p>
+                </div>
+                <div class="flex-shrink-0 self-start sm:self-center px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-700 dark:text-amber-400 text-xs font-semibold whitespace-nowrap">
+                  45–55% Humidity
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Framed Luxury Interior Showcase Photograph -->
+          <div class="lg:col-span-6">
+            <div
+              class="relative rounded-2xl overflow-hidden border border-stone-200 dark:border-stone-800 shadow-2xl aspect-[4/3] sm:aspect-[16/11] bg-stone-900 group">
+              <img src="assets/images/sections/p27.jpg"
+                alt="Contemporary luxury wooden interior with acoustic carved timber panels"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              <div
+                class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10 flex items-center justify-between text-xs text-white">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                  <span class="font-semibold text-amber-300">Acoustic Spatial Installation</span>
+                </div>
+                <span class="text-stone-400 text-[11px]">180° Wavefront Tested</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------
+         SECTION 6: ARCHITECTURAL TRADE PARTNERSHIP & COMMISSION (UNIQUE CTA)
+         ------------------------------------------------------------------ -->
+    <section id="trade-commission" class="py-20 sm:py-28 bg-stone-950 text-white relative overflow-hidden"
+      aria-labelledby="trade-cta-heading">
+      <img src="assets/images/backgrounds/p28.jpg" alt="Architectural design blueprint background"
+        class="absolute inset-0 w-full h-full object-cover opacity-55 brightness-95 contrast-110">
+      <div class="absolute inset-0 bg-gradient-to-b from-stone-950/75 via-stone-950/55 to-stone-950/80"></div>
+
+      <div class="container-custom relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <!-- Left Column: Trade Program Privileges -->
+          <div class="lg:col-span-5">
+            <span class="timber-badge mb-4">Architectural Atelier Partnership</span>
+            <h2 id="trade-cta-heading" class="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+              Partner With Us on Your Next Masterpiece Project
+            </h2>
+            <p class="text-stone-300 text-sm sm:text-base leading-relaxed mb-8">
+              Collaborating with architects and ateliers from spatial concept through rigging.
+            </p>
+
+            <ul class="space-y-3.5 text-xs text-stone-300">
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-amber-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>3D Parametric CAD / Rhino & Revit BIM Model Deliverables</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-amber-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Structural Engineering Calculations & Concealed Cleat Mounting</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-amber-500 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd" />
+                </svg>
+                <span>Full Forestry Chain-of-Custody & CITES Compliance Documentation</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Trade Submission Form -->
+          <div class="lg:col-span-7">
+            <div class="bg-stone-900/90 border border-stone-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+              <h3 class="font-serif text-lg font-bold text-white mb-4">Request Project Engineering Brief</h3>
+
+              <form
+                onsubmit="event.preventDefault(); alert('Trade brief received. Our senior timber engineer will contact your practice within 1 business day.');">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1"
+                      for="h2-name">Lead Architect / Principal</label>
+                    <input type="text" id="h2-name" required placeholder="Alexei Stasov, AIA"
+                      class="w-full px-4 py-2.5 text-sm bg-stone-950 border border-stone-700 rounded-md text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1"
+                      for="h2-practice">Practice / Atelier Name</label>
+                    <input type="text" id="h2-practice" required placeholder="Stasov Architecture Studio"
+                      class="w-full px-4 py-2.5 text-sm bg-stone-950 border border-stone-700 rounded-md text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1"
+                      for="h2-email">Corporate Work Email</label>
+                    <input type="email" id="h2-email" required placeholder="alexei@stasov-arch.com"
+                      class="w-full px-4 py-2.5 text-sm bg-stone-950 border border-stone-700 rounded-md text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1"
+                      for="h2-scale">Estimated Timber Scale</label>
+                    <select id="h2-scale"
+                      class="w-full px-4 py-2.5 text-sm bg-stone-950 border border-stone-700 rounded-md text-white focus:outline-none focus:border-amber-500">
+                      <option value="single-sculpt">Single Monumental Sculpture (&lt; 3m)</option>
+                      <option value="atrium-feature">Atrium / Cantilever Feature (3m - 8m)</option>
+                      <option value="wall-matrix">Acoustic Wall Tile Matrix (50m²+)</option>
+                      <option value="estate-package">Full Private Estate Package</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <label class="block text-xs font-semibold text-stone-300 uppercase tracking-wider mb-1"
+                    for="h2-notes">Spatial Scope & Location</label>
+                  <textarea id="h2-notes" rows="3" required
+                    placeholder="Specify project city, architectural environment, structural loads, and target completion quarter..."
+                    class="w-full px-4 py-2.5 text-sm bg-stone-950 border border-stone-700 rounded-md text-white placeholder-stone-500 focus:outline-none focus:border-amber-500"></textarea>
+                </div>
+
+                <button type="submit"
+                  class="w-full py-3.5 px-6 bg-amber-600 hover:bg-amber-500 text-black font-bold text-sm uppercase tracking-wider rounded-md shadow-lg transition-colors flex items-center justify-center gap-2">
+                  <span>Submit Architectural Consultation</span>
+                  <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       6. Shared Artisanal Footer (With Official Brand Logo)
+       ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-stone-800">
+
+        <div class="lg:col-span-2">
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <img src="assets/images/icons/logo.svg" alt="Wood Carving Studio Logo" width="38" height="38">
+            <span class="footer-brand-title">Wood Carving Studio</span>
+          </a>
+          <p class="text-stone-300 text-sm leading-relaxed max-w-sm mb-6">
+            Handcrafting bespoke timber sculptures, heritage architectural reliefs, and heirloom wood pieces with
+            generational mastery since 1988.
+          </p>
+          <div class="flex items-center gap-3">
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded text-xs font-medium bg-amber-950 text-amber-300 border border-amber-800">
+              Sustainable Timber Certified
+            </span>
+            <span
+              class="inline-flex items-center px-2.5 py-1 rounded text-xs font-medium bg-stone-900 text-stone-300 border border-stone-800">
+              Hand-Chiseled
+            </span>
+          </div>
+
+          <!-- Atelier Social Channels -->
+          <div class="flex items-center gap-2.5 mt-5" aria-label="Atelier Social Profiles">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+              aria-label="Instagram">
+              <svg class="fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+              aria-label="Pinterest">
+              <svg class="fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+              aria-label="YouTube">
+              <svg class="fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+              aria-label="Facebook">
+              <svg class="fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+              aria-label="X (Twitter)">
+              <svg class="fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Studio</h3>
+          <ul class="space-y-2.5 list-none p-0 m-0">
+            <li><a href="index.html" class="footer-link">Home 1 (Artisanal)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Architectural)</a></li>
+            <li><a href="about.html" class="footer-link">About Master Sculptor</a></li>
+            <li><a href="products.html" class="footer-link">Carved Products</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Commissions</h3>
+          <ul class="space-y-2.5 list-none p-0 m-0">
+            <li><a href="commissions.html" class="footer-link">Custom Commissions</a></li>
+            <li><a href="gallery.html" class="footer-link">Permanent Archive</a></li>
+            <li><a href="contact.html" class="footer-link">Studio Consultation</a></li>
+            <li><a href="contact.html" class="footer-link">Restoration Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Atelier</h3>
+          <address class="not-italic text-sm text-stone-300 space-y-2 leading-relaxed">
+            <p>Timber Mill Guildhouse, Studio 14</p>
+            <p>Blackwood Way, High Wycombe</p>
+            <p class="text-amber-400 font-medium">atelier@woodcarving.com</p>
+            <p>+44 (0) 20 7946 0832</p>
+          </address>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+        <p>&copy; 2026 Wood Carving Studio. All rights reserved. Handcrafted with pride.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-white transition-colors">Privacy Charter</a>
+          <a href="#" class="hover:text-white transition-colors">Ethical Sourcing</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Atelier</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       7. Scroll To Top Button
+       ====================================================================== -->
+  <button id="scroll-top-btn" class="scroll-top-btn" type="button" aria-label="Scroll back to top">
+    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- External JavaScript (Zero Inline JS in HTML) -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

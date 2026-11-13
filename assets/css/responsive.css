@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Wood Carving Studio — Responsive Stylesheet
+   Breakpoints: 320, 360, 375, 393, 412, 425, 427, 440, 768, 820, 960, 1024, 1032, 1280, 1440, 1536, 1920+
+   ========================================================================== */
+
+/* Container Standard System - Strictly Uniform Across Header, Sections, and Footer */
+.container-custom {
+  width: 100%;
+  max-width: 72rem; /* 1152px - Reduced & unified container width across Header, Sections, and Footer */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   Desktop Navigation & Layout (1024px and above)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+  .mobile-toggle-btn {
+    display: none !important;
+  }
+  .header-actions .icon-control-btn {
+    display: inline-flex !important;
+  }
+  .header-cta-btn {
+    display: inline-flex !important;
+  }
+  .mobile-drawer,
+  .mobile-drawer-backdrop {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  .nav-menu {
+    gap: 0.75rem;
+  }
+  .nav-link {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.125rem;
+  }
+  .brand-title {
+    font-size: 0.875rem;
+  }
+  .header-container {
+    gap: 0.75rem;
+  }
+  .header-actions {
+    gap: 0.375rem;
+  }
+  .header-cta-btn {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* ==========================================================================
+   Tablet & Intermediate Breakpoints (768px, 820px, 960px, up to 1023px)
+   ========================================================================== */
+@media (max-width: 1023.98px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .header-actions .icon-control-btn {
+    display: none !important;
+  }
+  .header-cta-btn {
+    display: none !important;
+  }
+  .mobile-toggle-btn {
+    display: inline-flex !important;
+  }
+  .brand-title {
+    font-size: 1rem;
+  }
+  .site-header {
+    --header-height: 60px;
+  }
+  .main-content {
+    padding-top: 60px;
+  }
+  .hero-full-height {
+    min-height: calc(100vh - 60px);
+  }
+}
+
+/* ==========================================================================
+   Mobile Medium & Compact Screens (360px, 375px, 393px, 412px, 425px, 427px, 440px)
+   ========================================================================== */
+@media (max-width: 639.98px) {
+  .hero-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  .process-step-item {
+    padding-left: 0 !important;
+    padding-top: 1rem !important;
+  }
+}
+
+@media (max-width: 440px) {
+  .brand-title {
+    font-size: 0.9375rem;
+  }
+  .brand-subtitle-badge {
+    display: none; /* Preserves single-line header on narrow mobile screens */
+  }
+  .brand-logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  .header-actions {
+    gap: 0.5rem;
+  }
+  .container-custom {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-title {
+    font-size: 0.8125rem;
+  }
+  .hero-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* ==========================================================================
+   Ultra-wide Screens (1536px and 1920px+)
+   Container remains strictly unified at 72rem (1152px) for Header, Sections, and Footer
+   ========================================================================== */
+@media (min-width: 1536px) {
+  .container-custom {
+    max-width: 72rem;
+  }
+}
+
+/* ==========================================================================
+   Accessibility & Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
